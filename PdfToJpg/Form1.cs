@@ -44,7 +44,7 @@ namespace PdfToJpg
                 Directory.CreateDirectory(imageOutputPath);
             }
 
-            // validate pageNum
+            // 开始的页
             if (startPageNum <= 0)
             {
                 startPageNum = 1;
@@ -75,17 +75,17 @@ namespace PdfToJpg
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // 打开地图文件
+            // 打开文件
             
             OpenFileDialog addFileDialog = new OpenFileDialog();
             addFileDialog.Filter = "pdf|*.pdf";
 
-            //判断打开文件窗口是否打开
+            //  
             if (addFileDialog.ShowDialog() == DialogResult.OK)
             {
                 if (addFileDialog.FileName != null)
                 {
-                    //得到txt的地址信息
+                    //得到地址信息
                     address_pdf = addFileDialog.FileName;
                 }
                 else
