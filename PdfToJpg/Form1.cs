@@ -62,7 +62,7 @@ namespace PdfToJpg
                 endPageNum = startPageNum;
             }
 
-            // start to convert each page
+            // 转成图片，并保存
             for (int i = startPageNum; i <= endPageNum; i++)
             {
                 Bitmap pageImage = pdfFile.GetPageImage(i - 1, 56 * (int)definition);
